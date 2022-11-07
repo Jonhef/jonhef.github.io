@@ -1,0 +1,1 @@
+document.write("<nav class=\"top-menu\"><a class=\"navbar-logo\ href=\"\"><img src=\"assets/icon.jpg\"></a><ul class=\"menu-main\"><li><a href=\"repositories/index.html\">Repositories</a></li><li><a href=\"about/me.html\">About me</a></li><li><a href=\"documentation/index.html\">Documentation</a></li></ul></nav>")
