@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Главная</title>
+        <link rel="stylesheet" href="styles/index-style.css" type="text/css">
+    </head>
+    <body>
+        <div class="menu-container">
+            <img src="logo.jpg" id="logo-img-menu">
+            <div class="menu-text">
+                <a href="#">Главная</a>
+                <a href="#main-paragraph">Обо мне</a>
+                <a>Мои проекты</a>
+                <a>Ссылки</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="no-ads">
+                <div class="last-video-main-container">
+                    <div class="video-wrapper">
+                        <div id="last-video">
+                            <script>
+                                // Замените YOUR_API_KEY на ваш ключ API
+                                const apiKey = 'AIzaSyAu6F9D9L0QxFTaXFcmuPOG_1XTvFpmedg';
+                                const channelId = 'UCjYlpjuHknFt9NXZcyaHPyQ';
+            
+                                // Формирование URL-адреса запроса
+                                const url = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=1`;
+            
+                                // Отправка GET-запроса на URL-адрес YouTube API
+                                fetch(url)
+                                    .then(response => response.json())
+                                    .then(data => {
+                                        // Получение ID последнего видео
+                                        if (data.items == undefined) {
+                                            const videoContainer = document.getElementById('last-video');
+                                            videoContainer.innerHTML = `<iframe width="480" height="270" src="https://www.youtube.com/embed/oi3FnRfP8zc" frameborder="0" allow="autoplay; encrypted-media"></iframe>`;
+                                        }
+                                        else {
+                                            // Вставка плеера YouTube на страницу с последним видео
+                                            const videoId = data.items[0].id.videoId;
+                                            const videoContainer = document.getElementById('last-video');
+                                            videoContainer.innerHTML = `<iframe width="480" height="270" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="autoplay; encrypted-media"></iframe>`;
+                                        }
+                                })
+                                .catch(error => console.error(error));
+                            </script>
+                        </div> 
+                    </div>
+                    <a href="https://www.youtube.com/channel/UCjYlpjuHknFt9NXZcyaHPyQ"><h4 class="last-video-alt">Последнее видео на канале</h4></a>
+                </div>
+                <div class="main-paragraph">
+                    <div class="main-text">
+                        <p id="main-h1"><b>Обо мне</b></p>
+                        <div id="main-text">
+                            <p>Меня зовут Дима, мне 14 лет и я очень увлекаюсь компьютерными играми и сборкой компьютеров. Мой псевдоним в интернете - jonhef, именно под этим ником я играю во множество онлайн-игр.</p>
+                            <p>Одна из моих любимых игр - osu!. Это ритм-игра, где нужно кликать по объектам на экране в такт музыке. Я провожу за нее много времени, тренируя свою реакцию и скорость мышления. Изначально я не был особо талантлив в этой игре, но благодаря упорству и тренировкам я достиг неплохих результатов.</p>
+                            <p>Кроме osu!, я также обожаю играть в CS:GO. Эта игра требует не только быстроты реакции, но и стратегического мышления, а также командной работы. Я часто играю в нее со своими друзьями, что делает игру еще более увлекательной и интересной.</p>
+                            <p>Но это далеко не все, что меня увлекает. Сборка компьютеров - это еще один мой увлекательный хобби. Мне интересно изучать новые технологии и аппаратное обеспечение, а также собирать компьютеры для себя и своих друзей. Это очень увлекательное занятие, которое помогает мне развиваться и повышать свои навыки.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="google-ads">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5019501017893993" crossorigin="anonymous"></script>
+                <!-- слева -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-5019501017893993"
+                    data-ad-slot="3030641725"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+        <div class="bottom-container">
+
+        </div>
+    </body>
+</html>

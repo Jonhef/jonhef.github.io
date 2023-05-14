@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;700&family=Noto+Sans&display=swap');
+body {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    transition: 0.7s;
+}
+.menu-container {
+    background-color: rgb(24,24,24);
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#logo-img-menu {
+    width: 6%;
+    height: 6%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.menu-text {
+    display: flex;
+    justify-content: flex-end;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    transition: 0.8s;
+}
+.menu-text a {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.menu-text a:hover {
+    transition: 0.5s;
+    color: rgb(200,200,200)
+}
+.last-video {
+    padding: 10px;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.video-wrapper {
+    padding: 7px 7px 0px 7px; /* Отступы внутри рамки */
+}
+.last-video-alt {
+    color: rgb(0,0,0);
+    padding: 0;
+    margin: 0;
+    padding-left: 7px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14pt;
+}
+iframe {
+    padding: 0;
+    border: none;
+    margin: 0;
+}
+.main-paragraph {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    padding-left: 16px;
+}
+.last-video-main-container {
+    width: auto;
+}   
+.no-ads {
+    display: flex;
+}
+#main-h1 {
+    font-size: 24pt;
+    padding: 0;
+    margin: 0;
+    padding-top: 16px;
+}
+#main-text {
+    font-size: 12pt;
+}
+.bottom-container {
+    display: flex;   
+}
+.google-ads {
+    display: block;
+}
